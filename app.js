@@ -19,7 +19,7 @@ app.use(express.json());
 app.use(
 	cors({
 		origin: ['https://scms-web.netlify.app'],
-		methods: ['GET', 'POST', 'DELETE'],
+		methods: ['GET', 'POST', 'DELETE', 'PATCH', 'UPDATE'],
 		credentials: true,
 	})
 );

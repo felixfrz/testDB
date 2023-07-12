@@ -16,11 +16,13 @@ app.get("/", (req,res)=>{
 
 
 app.use(express.json())
-app.use(cors({
-    origin: ["http://localhost:3000"],
-    methods: ["GET", "POST"],
-    credentials: true
-}));
+app.use(
+	cors({
+		origin: ['https://scms-web.netlify.app'],
+		methods: ['GET', 'POST'],
+		credentials: true,
+	})
+);
 
 app.use(cookieParser());
 

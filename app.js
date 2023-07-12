@@ -8,7 +8,7 @@ const bodyParser = require("body-parser"); router.use(bodyParser.json());
 const cookieParser = require('cookie-parser'); 
 const session = require('express-session');
 
-const port = 3001;
+const PORT = process.env.PORT || 3001;
 
 app.get("/", (req,res)=>{
     res.send("server start")
@@ -43,6 +43,6 @@ app.use(session({
 app.use("/uploads", express.static("./uploads"))
 app.use(router);
 
-app.listen(port,()=>{
-    console.log("Server started on port" + port);
+app.listen(PORT, () => {
+	console.log('Server started on port' + PORT);
 });
